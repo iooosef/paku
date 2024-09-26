@@ -1,6 +1,6 @@
 <template>
     <footer class="footer mt-16 bottom-1">
-        <div class="p-4 footer-of-footer content has-text-centered">
+        <div class="w-full p-4 flex justify-center footer-of-footer content has-text-centered">
             <p class="text-center">
                 &copy; 2024 Philippine Association for Coders University. All rights reserved.
             </p>

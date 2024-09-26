@@ -1,6 +1,11 @@
 <!-- src/views/Home.vue -->
 <template>
-  <div class="h-52 mt-24 mb-10 bg-fixed bg-no-repeat bg-center bg-cover" style="background: linear-gradient(0deg, rgba(208, 150, 21, 0.5 ), rgba(0, 0, 0, 0.3)), url(./src/assets/paku_campus_front_v2.png); background-repeat: no-repeat; background-size: cover; background-position: center;">
+  <App>
+    <template v-slot:header>
+      <Header />
+    </template>
+  </App>
+  <div class="h-1/2 pt-28 mb-10 bg-fixed bg-no-repeat bg-center bg-cover" style="background: linear-gradient(0deg, rgba(208, 150, 21, 0.5 ), rgba(0, 0, 0, 0.3)), url(./src/assets/paku_campus_front_v2.png); background-repeat: no-repeat; background-size: cover; background-position: center;">
     <div class="h-full px-6 flex flex-col justify-center items-center">
       <h3 class="text-3xl font-bold text-center text-white">Admissions</h3>
     </div>
@@ -40,11 +45,24 @@
         </ul>
       </div>
   </div>
+    <App>
+      <template v-slot:footer>
+        <Footer />
+      </template>
+    </App>
 </template>
   
   <script>
+  import Header from '../components/Header.vue';
+  import Footer from '../components/Footer.vue';
+  import App from '../App.vue'
   export default {
-    name: 'Admissions'
+    name: 'Admissions',
+    components: {
+      App,
+      Header,
+      Footer
+    }
   }
   </script>
   

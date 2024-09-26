@@ -1,5 +1,10 @@
 <!-- src/views/Home.vue -->
 <template>
+  <App>
+    <template v-slot:header>
+      <Header />
+    </template>
+  </App>
   <div class="h-screen mb-10 bg-fixed bg-no-repeat bg-center bg-cover" style="background: linear-gradient(0deg, rgba(0, 50, 98, 0.3), rgba(0, 0, 0, 0.3)), url(./src/assets/paku_campus_front_v2.png); background-repeat: no-repeat; background-size: cover; background-position: center;">
     <div class="h-full px-6 flex flex-col justify-center items-center">
       <img src="../assets/paku-logo.png" class="h-44 md:h-56" style="">
@@ -36,11 +41,24 @@
       </p>
     </div>
   </div>
+  <App>
+    <template v-slot:footer>
+      <Footer />
+    </template>
+  </App>
 </template>
   
   <script>
+  import Header from '../components/Header.vue';
+  import Footer from '../components/Footer.vue';
+  import App from '../App.vue'
   export default {
-    name: 'Home'
+    name: 'Home',
+    components: {
+      App,
+      Header,
+      Footer
+    }
   }
   </script>
   
